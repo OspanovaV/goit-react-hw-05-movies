@@ -20,13 +20,14 @@ export default function MovieCard({ movie }) {
     vote_average,
     overview,
     genres,
-    release_date,    
+    release_date,
+    backdrop_path,
   } = movie;
 
-  
+  const backdrop = `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${backdrop_path}`;
   return (
     <>
-      <Container>
+      <Container backdrop_path={backdrop}>
         <Wrapper>
           <Poster
             src={
