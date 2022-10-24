@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
+
 import {
   Wrapper,
   Input,
@@ -19,8 +20,9 @@ export default function SearchBox({ onSubmit }) {
   const handleSubmit = e => {
     e.preventDefault();
     if (searchQuery.trim() === '') {
-      toast.warn('Please specify your query!');
-    return;
+      // toast.warn('Please specify your query!');
+      alert('Please specify your query!');
+      return;
     }
     onSubmit(searchQuery);
     setSearchQuery('');
